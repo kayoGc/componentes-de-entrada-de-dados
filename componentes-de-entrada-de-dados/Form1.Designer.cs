@@ -35,6 +35,11 @@ namespace componentes_de_entrada_de_dados
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblCPF = new System.Windows.Forms.Label();
             this.lblEstado = new System.Windows.Forms.Label();
+            this.groupBox = new System.Windows.Forms.GroupBox();
+            this.op1 = new System.Windows.Forms.RadioButton();
+            this.op2 = new System.Windows.Forms.RadioButton();
+            this.op3 = new System.Windows.Forms.RadioButton();
+            this.groupBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtCPF
@@ -106,7 +111,7 @@ namespace componentes_de_entrada_de_dados
             // 
             this.lblCPF.AutoSize = true;
             this.lblCPF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.9F);
-            this.lblCPF.Location = new System.Drawing.Point(31, 102);
+            this.lblCPF.Location = new System.Drawing.Point(22, 101);
             this.lblCPF.Name = "lblCPF";
             this.lblCPF.Size = new System.Drawing.Size(134, 22);
             this.lblCPF.TabIndex = 5;
@@ -124,11 +129,60 @@ namespace componentes_de_entrada_de_dados
             this.lblEstado.Text = "Qual Seu Estado?";
             this.lblEstado.Click += new System.EventHandler(this.lblEstado_Click);
             // 
+            // groupBox
+            // 
+            this.groupBox.Controls.Add(this.op3);
+            this.groupBox.Controls.Add(this.op2);
+            this.groupBox.Controls.Add(this.op1);
+            this.groupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.9F);
+            this.groupBox.Location = new System.Drawing.Point(26, 277);
+            this.groupBox.Name = "groupBox";
+            this.groupBox.Size = new System.Drawing.Size(200, 130);
+            this.groupBox.TabIndex = 8;
+            this.groupBox.TabStop = false;
+            this.groupBox.Text = "Estado Civil";
+            this.groupBox.Enter += new System.EventHandler(this.groupBox_Enter);
+            // 
+            // op1
+            // 
+            this.op1.AutoSize = true;
+            this.op1.Location = new System.Drawing.Point(17, 24);
+            this.op1.Name = "op1";
+            this.op1.Size = new System.Drawing.Size(96, 22);
+            this.op1.TabIndex = 0;
+            this.op1.TabStop = true;
+            this.op1.Text = "Casado(a)";
+            this.op1.UseVisualStyleBackColor = true;
+            // 
+            // op2
+            // 
+            this.op2.AutoSize = true;
+            this.op2.Location = new System.Drawing.Point(17, 47);
+            this.op2.Name = "op2";
+            this.op2.Size = new System.Drawing.Size(95, 22);
+            this.op2.TabIndex = 1;
+            this.op2.TabStop = true;
+            this.op2.Text = "Solteiro(a)";
+            this.op2.UseVisualStyleBackColor = true;
+            // 
+            // op3
+            // 
+            this.op3.AutoSize = true;
+            this.op3.Location = new System.Drawing.Point(17, 70);
+            this.op3.Name = "op3";
+            this.op3.Size = new System.Drawing.Size(80, 22);
+            this.op3.TabIndex = 2;
+            this.op3.TabStop = true;
+            this.op3.Text = "Viuvo(a)";
+            this.op3.UseVisualStyleBackColor = true;
+            this.op3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.groupBox);
             this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.lblCPF);
             this.Controls.Add(this.txtNome);
@@ -138,6 +192,8 @@ namespace componentes_de_entrada_de_dados
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.groupBox.ResumeLayout(false);
+            this.groupBox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,6 +207,10 @@ namespace componentes_de_entrada_de_dados
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lblCPF;
         private System.Windows.Forms.Label lblEstado;
+        private System.Windows.Forms.GroupBox groupBox;
+        private System.Windows.Forms.RadioButton op3;
+        private System.Windows.Forms.RadioButton op2;
+        private System.Windows.Forms.RadioButton op1;
     }
 }
 
