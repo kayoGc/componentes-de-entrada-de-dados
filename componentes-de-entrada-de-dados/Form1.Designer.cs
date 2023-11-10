@@ -39,7 +39,9 @@ namespace componentes_de_entrada_de_dados
             this.op1 = new System.Windows.Forms.RadioButton();
             this.op2 = new System.Windows.Forms.RadioButton();
             this.op3 = new System.Windows.Forms.RadioButton();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.groupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCPF
@@ -82,7 +84,7 @@ namespace componentes_de_entrada_de_dados
             "São Paulo",
             "Sergipe",
             "Tocantins"});
-            this.txtEstado.Location = new System.Drawing.Point(25, 218);
+            this.txtEstado.Location = new System.Drawing.Point(25, 217);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(145, 21);
             this.txtEstado.TabIndex = 1;
@@ -135,7 +137,7 @@ namespace componentes_de_entrada_de_dados
             this.groupBox.Controls.Add(this.op2);
             this.groupBox.Controls.Add(this.op1);
             this.groupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.9F);
-            this.groupBox.Location = new System.Drawing.Point(26, 277);
+            this.groupBox.Location = new System.Drawing.Point(26, 257);
             this.groupBox.Name = "groupBox";
             this.groupBox.Size = new System.Drawing.Size(200, 130);
             this.groupBox.TabIndex = 8;
@@ -177,11 +179,19 @@ namespace componentes_de_entrada_de_dados
             this.op3.UseVisualStyleBackColor = true;
             this.op3.CheckedChanged += new System.EventHandler(this.radioButton3_CheckedChanged);
             // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(402, 47);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
+            this.numericUpDown1.TabIndex = 9;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.groupBox);
             this.Controls.Add(this.lblEstado);
             this.Controls.Add(this.lblCPF);
@@ -194,6 +204,7 @@ namespace componentes_de_entrada_de_dados
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox.ResumeLayout(false);
             this.groupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,6 +222,7 @@ namespace componentes_de_entrada_de_dados
         private System.Windows.Forms.RadioButton op3;
         private System.Windows.Forms.RadioButton op2;
         private System.Windows.Forms.RadioButton op1;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }
 
